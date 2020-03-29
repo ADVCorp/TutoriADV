@@ -1,0 +1,184 @@
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo-principal);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+/* Ancho maximo */
+.mx-w {
+    max-width: 1300px;
+}
+
+/* Logo TutoriADV */
+.logo1 {
+    color: #fff;
+    font-size: 1em;
+}
+
+.logo2 {
+    color: #ff0000;
+    font-size: 1.1em;
+}
+
+/* Estilo de header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--fondo-header);
+    z-index: 2;
+}
+
+.header .grid-header {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0 20px;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo buscador usuario";
+}
+
+/* estilo de header - seccion logo */
+.header .con-logo {
+    grid-area: logo;
+}
+
+.header .con-logo button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+.header .con-logo button:hover {
+    background: var(--fondo-principal);
+}
+
+.header .logoADV {
+    margin: 0 20px;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+/* estilo de header - seccion buscador */
+.header .con-buscador {
+    grid-area: buscador;
+}
+
+.header .con-buscador form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .con-buscador input {
+    width: 60%;
+    padding: 0 15px;
+    margin: 0;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid var(--fondo-principal);
+    font-size: 1em;
+}
+
+.header .con-buscador button {
+    height: 35px;
+    font-size: 1em;
+    padding: 0 25px;
+    margin: 0;
+    color: var(--color-2);
+    border: 1px solid var(--fondo-principal);
+    border-left: none;
+}
+
+.header .con-buscador button:hover {
+    background: var(--fondo-principal);
+}
+
+/* estilo de header - seccion usuario */
+.header .con-usuario {
+    grid-area: usuario;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.header .con-usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+/* estilo del menu lateral */
+.nav {
+    z-index: 1;
+    width: 300px;
+    min-width: 18%;
+    height: 100vh;
+    background: var(--fondo-header);
+    padding-top: 100px;
+}
+
+/* estilo de nav - link */
+.nav section a {
+    display: block;
+    padding: 15px 35px;
+    min-width: 300px;
+    color: var(--color-1);
+}
+
+.nav section a:hover {
+    background: var(--fondo-footer);
+}
+
+.nav section a .fas, .fab {
+    color: var(--color-2);
+    margin-right: 35px;
+    width: 20px;
+}
+
+.nav section a:hover .fas {
+    color: var(--color-icono);
+}
+
+.nav section a:hover .fab {
+    color: var(--color-icono);
+}
+
+.nav hr {
+    margin: 20px 0;
+}
+
+.nav .link-titulo {
+    text-align: center;
+    color: var(--color-3);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
